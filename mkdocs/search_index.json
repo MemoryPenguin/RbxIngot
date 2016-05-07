@@ -1,102 +1,102 @@
 {
     "docs": [
         {
-            "location": "/Index/", 
+            "location": "/Index/index.html", 
             "text": "Ingot\n#\n\n\nIngot is a user interface toolkit for \nROBLOX\n that aims to make it easier to build complex user interfaces. Ingot extends the ROBLOX user interface objects with more complex components, like dropdowns and radio button groups.", 
             "title": "Home"
         }, 
         {
-            "location": "/Index/#ingot", 
+            "location": "/Index/index.html#ingot", 
             "text": "Ingot is a user interface toolkit for  ROBLOX  that aims to make it easier to build complex user interfaces. Ingot extends the ROBLOX user interface objects with more complex components, like dropdowns and radio button groups.", 
             "title": "Ingot"
         }, 
         {
-            "location": "/Using/", 
+            "location": "/Using/index.html", 
             "text": "Using Components\n#\n\n\nTODO", 
             "title": "Using Components"
         }, 
         {
-            "location": "/Using/#using-components", 
+            "location": "/Using/index.html#using-components", 
             "text": "TODO", 
             "title": "Using Components"
         }, 
         {
-            "location": "/Components/Dropdown/", 
+            "location": "/Components/Dropdown/index.html", 
             "text": "Dropdown Component\n#\n\n\nThe Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.\n\n\n\n\n\nProperties\n#\n\n\nnumber\n AnimationTime\n#\n\n\nHow long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to \n0.3\n.\n\n\nColor3\n BorderColor3\n#\n\n\nThe color of the dropdown's borders.\n\n\nboolean\n CloseOnOptionSelected\n#\n\n\nWhether to close the dropdown when an option is selected. Defaults to \ntrue\n.\n\n\nstring\n CurrentEntry\n#\n\n\nThe currently selected item, or nil if it does not exist. Setting this will select the item corresponding to the string, or error if it does not exist. Defaults to \nnil\n.\n\n\narray\nstring\n Entries\n#\n\n\nThe entries of the dropdown. Setting this value will remove all entries from the dropdown, then add all the entries in the assigned value.\n\n\n\n\nNote\n\n\nModifying this value via \ntable.insert\n will not add or remove entries from the dropdown. To modify entries, use \nAddEntry\n and \nRemoveEntry\n.\n\n\n\n\nFont\n Font\n#\n\n\nThe font the dropdown uses. Defaults to \nSourceSans\n.\n\n\nFontSize\n FontSize\n#\n\n\nThe size of the dropdown's text. This value is used directly for the size of the dropdown's current item text, and the value immediately below it is used as the item entry font size. For example, if this property is set to \nSize24\n, the current item text will have a font size of \nSize24\n and the item entries will have a font size of \nSize18\n. Defaults to \nSize24\n.\n\n\nboolean\n Open\n#\n\n\nWhether the dropdown is open or not. Defaults to \nfalse\n.\n\n\nFont\n SelectedEntryFont\n#\n\n\nThe font that the dropdown's selected entry uses. Defaults to \nSourceSansBold\n.\n\n\n\n\nNote\n\n\nIf this is the same as \nFont\n, there will be no visual difference between a selected entry and an unselected one.\n\n\n\n\nnumber\n ShownItems\n#\n\n\nHow many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to \n3\n.\n\n\nnumber\n ZIndex\n#\n\n\nThe z-index of the dropdown. Defaults to \n1\n.", 
             "title": "Dropdown"
         }, 
         {
-            "location": "/Components/Dropdown/#dropdown-component", 
+            "location": "/Components/Dropdown/index.html#dropdown-component", 
             "text": "The Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.", 
             "title": "Dropdown Component"
         }, 
         {
-            "location": "/Components/Dropdown/#properties", 
+            "location": "/Components/Dropdown/index.html#properties", 
             "text": "", 
             "title": "Properties"
         }, 
         {
-            "location": "/Components/Dropdown/#number-animationtime", 
+            "location": "/Components/Dropdown/index.html#number-animationtime", 
             "text": "How long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to  0.3 .", 
             "title": "number AnimationTime"
         }, 
         {
-            "location": "/Components/Dropdown/#color3-bordercolor3", 
+            "location": "/Components/Dropdown/index.html#color3-bordercolor3", 
             "text": "The color of the dropdown's borders.", 
             "title": "Color3 BorderColor3"
         }, 
         {
-            "location": "/Components/Dropdown/#boolean-closeonoptionselected", 
+            "location": "/Components/Dropdown/index.html#boolean-closeonoptionselected", 
             "text": "Whether to close the dropdown when an option is selected. Defaults to  true .", 
             "title": "boolean CloseOnOptionSelected"
         }, 
         {
-            "location": "/Components/Dropdown/#string-currententry", 
+            "location": "/Components/Dropdown/index.html#string-currententry", 
             "text": "The currently selected item, or nil if it does not exist. Setting this will select the item corresponding to the string, or error if it does not exist. Defaults to  nil .", 
             "title": "string CurrentEntry"
         }, 
         {
-            "location": "/Components/Dropdown/#arraystring-entries", 
+            "location": "/Components/Dropdown/index.html#arraystring-entries", 
             "text": "The entries of the dropdown. Setting this value will remove all entries from the dropdown, then add all the entries in the assigned value.   Note  Modifying this value via  table.insert  will not add or remove entries from the dropdown. To modify entries, use  AddEntry  and  RemoveEntry .", 
             "title": "array&lt;string&gt; Entries"
         }, 
         {
-            "location": "/Components/Dropdown/#font-font", 
+            "location": "/Components/Dropdown/index.html#font-font", 
             "text": "The font the dropdown uses. Defaults to  SourceSans .", 
             "title": "Font Font"
         }, 
         {
-            "location": "/Components/Dropdown/#fontsize-fontsize", 
+            "location": "/Components/Dropdown/index.html#fontsize-fontsize", 
             "text": "The size of the dropdown's text. This value is used directly for the size of the dropdown's current item text, and the value immediately below it is used as the item entry font size. For example, if this property is set to  Size24 , the current item text will have a font size of  Size24  and the item entries will have a font size of  Size18 . Defaults to  Size24 .", 
             "title": "FontSize FontSize"
         }, 
         {
-            "location": "/Components/Dropdown/#boolean-open", 
+            "location": "/Components/Dropdown/index.html#boolean-open", 
             "text": "Whether the dropdown is open or not. Defaults to  false .", 
             "title": "boolean Open"
         }, 
         {
-            "location": "/Components/Dropdown/#font-selectedentryfont", 
+            "location": "/Components/Dropdown/index.html#font-selectedentryfont", 
             "text": "The font that the dropdown's selected entry uses. Defaults to  SourceSansBold .   Note  If this is the same as  Font , there will be no visual difference between a selected entry and an unselected one.", 
             "title": "Font SelectedEntryFont"
         }, 
         {
-            "location": "/Components/Dropdown/#number-shownitems", 
+            "location": "/Components/Dropdown/index.html#number-shownitems", 
             "text": "How many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to  3 .", 
             "title": "number ShownItems"
         }, 
         {
-            "location": "/Components/Dropdown/#number-zindex", 
+            "location": "/Components/Dropdown/index.html#number-zindex", 
             "text": "The z-index of the dropdown. Defaults to  1 .", 
             "title": "number ZIndex"
         }, 
         {
-            "location": "/Making/", 
+            "location": "/Making/index.html", 
             "text": "Making Components\n#\n\n\nTODO", 
             "title": "Making Components"
         }, 
         {
-            "location": "/Making/#making-components", 
+            "location": "/Making/index.html#making-components", 
             "text": "TODO", 
             "title": "Making Components"
         }
