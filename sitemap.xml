@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>None/</loc>
+     <loc>https://memorypenguin.github.io/RbxIngot/</loc>
      <lastmod>2016-05-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -11,15 +11,7 @@
 
     
     <url>
-     <loc>None/making/</loc>
-     <lastmod>2016-05-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/using/</loc>
+     <loc>https://memorypenguin.github.io/RbxIngot/using/</loc>
      <lastmod>2016-05-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -28,11 +20,19 @@
     
         
     <url>
-     <loc>None/components/dropdown/</loc>
+     <loc>https://memorypenguin.github.io/RbxIngot/components/dropdown/</loc>
      <lastmod>2016-05-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>https://memorypenguin.github.io/RbxIngot/making/</loc>
+     <lastmod>2016-05-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>
