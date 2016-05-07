@@ -15,19 +15,15 @@ theme: 'material'
 # Options
 extra:
   version: '0.1.0'
-  logo: 'images/logo.png'
   palette:
-    primary: 'indigo'
-    accent: 'light blue'
+    primary: 'blue grey'
+    accent: 'light green'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  i18n:
-    prev: 'Previous'
-    next: 'Next'
   author:
-    github: 'my-github-handle'
-    twitter: 'my-twitter-handle'
+    github: 'MemoryPenguin'
+    twitter: 'MemoryPenguin'
 
 # Extensions
 markdown_extensions:
