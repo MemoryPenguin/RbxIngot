@@ -1,2 +1,37 @@
-site_name: Ingot Documentation
+# Project information
+site_name: 'Ingot Documentation'
+site_description: 'A GUI toolkit for ROBLOX'
+site_author: 'MemoryPenguin'
+site_url: 'https://memorypenguin.github.io/RbxIngot'
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/MemoryPenguin/RbxIngot'
+
+# Documentation and theme
+docs_dir: 'docs'
 theme: 'material'
+
+# Options
+extra:
+  version: '0.1.0'
+  logo: 'images/logo.png'
+  palette:
+    primary: 'indigo'
+    accent: 'light blue'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  i18n:
+    prev: 'Previous'
+    next: 'Next'
+  author:
+    github: 'my-github-handle'
+    twitter: 'my-twitter-handle'
+
+# Extensions
+markdown_extensions:
+  - codehilite(css_class=code)
+  - admonition
+  - toc:
+      permalink: '#'
