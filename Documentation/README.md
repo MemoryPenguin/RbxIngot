@@ -1,0 +1,1 @@
+This folder contains the configuration and source Markdown files for Ingot's [MkDocs](http://www.mkdocs.org/) documentation. To view the actual documentation, you should use [this link](https://memorypenguin.github.io/rbxingot) instead.
