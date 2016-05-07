@@ -22,6 +22,8 @@ pages:
   - Making Components: 'Making.md'
 
 # Options
+use_directory_urls: false
+
 extra:
   version: '0.1.0'
   palette:
