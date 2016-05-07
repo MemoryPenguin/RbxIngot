@@ -15,11 +15,11 @@ theme: 'material'
 
 # Pages
 pages:
-  - Home: 'Index.md'
-  - Using Components: 'Using.md'
+  - Home: 'index.md'
+  - Using Components: 'using.md'
   - Components:
-    - 'Dropdown': 'Components/Dropdown.md'
-  - Making Components: 'Making.md'
+    - 'Dropdown': 'Components/dropdown.md'
+  - Making Components: 'making.md'
 
 # Options
 use_directory_urls: false
