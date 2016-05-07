@@ -9,16 +9,17 @@ repo_name: 'GitHub'
 repo_url: 'https://github.com/MemoryPenguin/RbxIngot'
 
 # Directory and theme
-docs_dir: 'docs'
+docs_dir: 'Source'
+site_dir: 'Output'
 theme: 'material'
 
 # Pages
 pages:
-  - Home: 'index.md'
-  - Using Components: 'using.md'
+  - Home: 'Index.md'
+  - Using Components: 'Using.md'
   - Components:
-    - 'Dropdown': 'components/dropdown.md'
-  - Making Components: 'making.md'
+    - 'Dropdown': 'Components/Dropdown.md'
+  - Making Components: 'Making.md'
 
 # Options
 extra:
