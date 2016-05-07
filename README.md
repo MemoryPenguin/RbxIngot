@@ -1,0 +1,3 @@
+Ingot is a user interface toolkit for [ROBLOX](https://roblox.com) that aims to make it easier to build complex user interfaces. Ingot extends the ROBLOX user interface objects with more complex components, like dropdowns and radio button groups.
+
+At the moment Ingot is still in development and is not ready for release. Soon (tm). For documentation, see [the GitHub Pages site](https://memorypenguin.github.io/rbxingot).
