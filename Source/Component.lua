@@ -1,40 +1,3 @@
----------------------
------ Variables -----
----------------------
-local propertyCache = {}
-local findFirstChild = game.FindFirstChild
-local pcall = pcall
-
----------------------
------ Functions -----
----------------------
-local function RawIsMemberOf(object, key)
-	return object[key] ~= findFirstChild(object, key)
-end
-
-local function IsMemberOf(object, key)
-	local className = object.ClassName
-	
-	if not propertyCache[className] then
-		propertyCache[className] = {}
-	end
-	
-	local cache = propertyCache[className]
-	if cache[key] ~= nil then
-		return cache[key]
-	else
-		print("cache miss: "..className.."."..key)
-		local success, notChild = pcall(RawIsMemberOf, object, key)
-		local memberOf = success and notChild
-		cache[key] = memberOf
-		return memberOf
-	end
-end
-
-local function Set(object, key, value)
-	object[key] = value
-end
-
 ---------------------------
 ----- Component Class -----
 ---------------------------
@@ -63,9 +26,6 @@ function Component:__index(key)
 	-- Boring normal class member
 	elseif classValue then
 		return classValue
-	-- Object property (not a child of the object), better spit that out
-	elseif IsMemberOf(object, key) then
-		return object[key]
 	end
 	
 	-- Technically the default case isn't necessary because of implicit nil returns
@@ -95,24 +55,173 @@ function Component:__newindex(key, value)
 			warn("Class key "..key.." is being occluded from an object (RootObject: "..object:GetFullName()..")")
 		end
 		
-		-- Try to set the property of the object.
-		local setSuccess, failureReason = pcall(Set, object, key, value)
-		
-		-- If we couldn't set it for some reason, go forward - otherwise we're done here.
-		if not setSuccess then
-			-- If the property's actually a member of the object, we need to error out - invalid value.
-			if IsMemberOf(object, key) then
-				error(failureReason)
-			-- Not a member of the object. Set the value as a field.
-			else
-				rawset(self, key, value)
-			end
-		end
+		rawset(self, key, value)
 	end
 end
 
-function Component:Test()
-	return "hi from component"
+--------------------------------------
+----- Component Class Properties -----
+--------------------------------------
+-- Since the component doesn't have the default GuiObject primitives they need to be implemented here
+-- This way all components will have them.
+function Component:get_Active()
+	return self.RootObject.Active
+end
+
+function Component:set_Active(value)
+	self.RootObject.Active = value
+end
+
+function Component:get_AbsolutePosition()
+	return self.RootObject.AbsolutePosition
+end
+
+function Component:get_AbsoluteSize()
+	return self.RootObject.AbsoluteSize
+end
+
+function Component:get_BackgroundColor3()
+	return self.RootObject.BackgroundColor3
+end
+
+function Component:set_BackgroundColor3(value)
+	self.RootObject.BackgroundColor3 = value
+end
+
+function Component:get_BackgroundTransparency()
+	return self.RootObject.BackgroundTransparency
+end
+
+function Component:set_BackgroundTransparency(value)
+	self.RootObject.BackgroundTransparency = value
+end
+
+function Component:get_BorderColor3()
+	return self.RootObject.BorderColor3
+end
+
+function Component:set_BorderColor3(value)
+	self.RootObject.BorderColor3 = value
+end
+
+function Component:get_BorderSizePixel()
+	return self.RootObject.BorderSizePixel
+end
+
+function Component:set_BorderSizePixel(value)
+	self.RootObject.BorderSizePixel = value
+end
+
+function Component:get_ClipsDescendants()
+	return self.RootObject.ClipsDescendants
+end
+
+function Component:set_ClipsDescendants(value)
+	self.RootObject.ClipsDescendants = value
+end
+
+function Component:get_Draggable()
+	return self.RootObject.Draggable
+end
+
+function Component:set_Draggable(value)
+	self.RootObject.Draggable = value
+end
+
+function Component:get_NextSelectionDown()
+	return self.RootObject.NextSelectionDown
+end
+
+function Component:set_NextSelectionDown(value)
+	self.RootObject.NextSelectionDown = value
+end
+
+function Component:get_NextSelectionLeft()
+	return self.RootObject.NextSelectionLeft
+end
+
+function Component:set_NextSelectionLeft(value)
+	self.RootObject.NextSelectionLeft = value
+end
+
+function Component:get_NextSelectionRight()
+	return self.RootObject.NextSelectionRight
+end
+
+function Component:set_NextSelectionRight(value)
+	self.RootObject.NextSelectionRight = value
+end
+
+function Component:get_NextSelectionUp()
+	return self.RootObject.NextSelectionUp
+end
+
+function Component:set_NextSelectionUp(value)
+	self.RootObject.NextSelectionUp = value
+end
+
+function Component:get_Position()
+	return self.RootObject.Position
+end
+
+function Component:set_Position(value)
+	self.RootObject.Position = value
+end
+
+function Component:get_Rotation()
+	return self.RootObject.Rotation
+end
+
+function Component:set_Rotation(value)
+	self.RootObject.Rotation = value
+end
+
+function Component:get_Selectable()
+	return self.RootObject.Selectable
+end
+
+function Component:set_Selectable(value)
+	self.RootObject.Selectable = value
+end
+
+function Component:get_SelectionImageObject()
+	return self.RootObject.SelectionImageObject
+end
+
+function Component:set_SelectionImageObject(value)
+	self.RootObject.SelectionImageObject = value
+end
+
+function Component:get_Size()
+	return self.RootObject.Size
+end
+
+function Component:set_Size(value)
+	self.RootObject.Size = value
+end
+
+function Component:get_SizeConstraint()
+	return self.RootObject.SizeConstraint
+end
+
+function Component:set_SizeConstraint(value)
+	self.RootObject.SizeConstraint = value
+end
+
+function Component:get_Visible()
+	return self.RootObject.Visible
+end
+
+function Component:set_Visible(value)
+	self.RootObject.Visible = value
+end
+
+function Component:get_ZIndex()
+	return self.RootObject.ZIndex
+end
+
+function Component:set_ZIndex(value)
+	self.RootObject.ZIndex = value
 end
 
 return Component
