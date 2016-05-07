@@ -9,47 +9,45 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Ingot Documentation - A GUI toolkit for ROBLOX</title>
+        <title>Dropdown - Ingot Documentation</title>
       
       
-        <meta name="description" content="A GUI toolkit for ROBLOX">
       
-      
-        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/">
+        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/Components/Dropdown/">
       
       
         <meta name="author" content="MemoryPenguin">
       
     
-    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/">
+    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/Components/Dropdown/">
     <meta property="og:title" content="Ingot Documentation">
-    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot//./">
+    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot/Components/Dropdown//../../">
     <meta name="apple-mobile-web-app-title" content="Ingot Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="./None">
-    <link rel="icon" type="image/x-icon" href="./None">
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('./assets/fonts/icon.eot?52m981');
-      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('./assets/fonts/icon.woff?52m981')
+      		   url('../../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('./assets/fonts/icon.ttf?52m981')
+      		   url('../../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('./assets/fonts/icon.svg?52m981#icon')
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="./assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application-54f87043f3.css">
     
-      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
     
     
       
@@ -66,7 +64,7 @@
       </style>
     
     
-    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
@@ -96,9 +94,13 @@
         
           <span class="path">
             
+              
+                Components <i class="icon icon-link"></i>
+              
+            
           </span>
         
-        Ingot Documentation
+        Dropdown
       </div>
     </div>
     
@@ -178,21 +180,16 @@
           
             
   <li>
-    <a class="current" title="Home" href=".">
+    <a class="" title="Home" href="../../Index/">
       Home
     </a>
-    
-      
-        
-      
-      
     
   </li>
 
           
             
   <li>
-    <a class="" title="Using Components" href="using/">
+    <a class="" title="Using Components" href="../../Using/">
       Using Components
     </a>
     
@@ -206,9 +203,24 @@
       
         
   <li>
-    <a class="" title="Dropdown" href="components/dropdown/">
+    <a class="current" title="Dropdown" href="./">
       Dropdown
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Properties" href="#properties">
+                Properties
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -219,7 +231,7 @@
           
             
   <li>
-    <a class="" title="Making Components" href="making/">
+    <a class="" title="Making Components" href="../../Making/">
       Making Components
     </a>
     
@@ -257,8 +269,41 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="ingot">Ingot<a class="headerlink" href="#ingot" title="Permanent link">#</a></h1>
-<p>Ingot is a user interface toolkit for <a href="https://roblox.com">ROBLOX</a> that aims to make it easier to build complex user interfaces. Ingot extends the ROBLOX user interface objects with more complex components, like dropdowns and radio button groups.</p>
+          <h1 id="dropdown-component">Dropdown Component<a class="headerlink" href="#dropdown-component" title="Permanent link">#</a></h1>
+<p>The Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.
+<img alt="Dropdown image" src="../../Images/Dropdown-1.png" /></p>
+<p><img alt="Dropdown structure" src="../../Images/Dropdown-2.png" /></p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
+<h3 id="number-animationtime"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> AnimationTime<a class="headerlink" href="#number-animationtime" title="Permanent link">#</a></h3>
+<p>How long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to <code>0.3</code>.</p>
+<h3 id="color3-bordercolor3"><a href="http://wiki.roblox.com/index.php?title=API:Color3">Color3</a> BorderColor3<a class="headerlink" href="#color3-bordercolor3" title="Permanent link">#</a></h3>
+<p>The color of the dropdown's borders.</p>
+<h3 id="boolean-closeonoptionselected"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> CloseOnOptionSelected<a class="headerlink" href="#boolean-closeonoptionselected" title="Permanent link">#</a></h3>
+<p>Whether to close the dropdown when an option is selected. Defaults to <code>true</code>.</p>
+<h3 id="string-currententry"><a href="http://wiki.roblox.com/index.php?title=API:String">string</a> CurrentEntry<a class="headerlink" href="#string-currententry" title="Permanent link">#</a></h3>
+<p>The currently selected item, or nil if it does not exist. Setting this will select the item corresponding to the string, or error if it does not exist. Defaults to <code>nil</code>.</p>
+<h3 id="arraystring-entries"><a href="http://wiki.roblox.com/index.php?title=API:Table">array&lt;string&gt;</a> Entries<a class="headerlink" href="#arraystring-entries" title="Permanent link">#</a></h3>
+<p>The entries of the dropdown. Setting this value will remove all entries from the dropdown, then add all the entries in the assigned value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Modifying this value via <code>table.insert</code> will not add or remove entries from the dropdown. To modify entries, use <a href="#AddEntry">AddEntry</a> and <a href="#RemoveEntry">RemoveEntry</a>.</p>
+</div>
+<h3 id="font-font"><a href="http://wiki.roblox.com/index.php?title=API:Enum/Font">Font</a> Font<a class="headerlink" href="#font-font" title="Permanent link">#</a></h3>
+<p>The font the dropdown uses. Defaults to <code>SourceSans</code>.</p>
+<h3 id="fontsize-fontsize"><a href="http://wiki.roblox.com/index.php?title=API:Enum/FontSize">FontSize</a> FontSize<a class="headerlink" href="#fontsize-fontsize" title="Permanent link">#</a></h3>
+<p>The size of the dropdown's text. This value is used directly for the size of the dropdown's current item text, and the value immediately below it is used as the item entry font size. For example, if this property is set to <code>Size24</code>, the current item text will have a font size of <code>Size24</code> and the item entries will have a font size of <code>Size18</code>. Defaults to <code>Size24</code>.</p>
+<h3 id="boolean-open"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> Open<a class="headerlink" href="#boolean-open" title="Permanent link">#</a></h3>
+<p>Whether the dropdown is open or not. Defaults to <code>false</code>.</p>
+<h3 id="font-selectedentryfont"><a href="http://wiki.roblox.com/index.php?title=API:Enum/Font">Font</a> SelectedEntryFont<a class="headerlink" href="#font-selectedentryfont" title="Permanent link">#</a></h3>
+<p>The font that the dropdown's selected entry uses. Defaults to <code>SourceSansBold</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this is the same as <a href="#Font">Font</a>, there will be no visual difference between a selected entry and an unselected one.</p>
+</div>
+<h3 id="number-shownitems"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> ShownItems<a class="headerlink" href="#number-shownitems" title="Permanent link">#</a></h3>
+<p>How many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to <code>3</code>.</p>
+<h3 id="number-zindex"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> ZIndex<a class="headerlink" href="#number-zindex" title="Permanent link">#</a></h3>
+<p>The z-index of the dropdown. Defaults to <code>1</code>.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -275,17 +320,33 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
+        <a href="../../Using/" title="Using Components">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Using Components
+              </div>
+            </div>
+          </div>
+        </a>
+      
     </div>
     <div class="next">
       
-        <a href="using/" title="Using Components">
+        <a href="../../Making/" title="Making Components">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Using Components
+                Making Components
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
@@ -311,10 +372,10 @@
       </div>
     </main>
     <script>
-      var base_url = '.';
+      var base_url = '../..';
       var repo_id  = 'MemoryPenguin/RbxIngot';
     </script>
-    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
     
     
   </body>
