@@ -5,12 +5,10 @@ The Dropdown component is a simple dropdown that supports selection of one item 
 ![Dropdown structure](/images/dropdown-2.png)
 
 ## Properties
+*Dropdown supports all GuiObject properties, For brevity, they have not been listed here.*
 
 ### [number](http://wiki.roblox.com/index.php?title=Number) AnimationTime
 How long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to `0.3`.
-
-### [Color3](http://wiki.roblox.com/index.php?title=API:Color3) BorderColor3
-The color of the dropdown's borders.
 
 ### [boolean](http://wiki.roblox.com/index.php?title=API:Boolean) CloseOnOptionSelected
 Whether to close the dropdown when an option is selected. Defaults to `true`.
@@ -41,6 +39,3 @@ The font that the dropdown's selected entry uses. Defaults to `SourceSansBold`.
 	
 ### [number](http://wiki.roblox.com/index.php?title=Number) ShownItems
 How many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to `3`.
-
-### [number](http://wiki.roblox.com/index.php?title=Number) ZIndex
-The z-index of the dropdown. Defaults to `1`.
