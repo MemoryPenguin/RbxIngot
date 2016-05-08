@@ -68,7 +68,7 @@ local properties = {
 	"Active", "AbsolutePosition", "AbsoluteSize", "BackgroundColor3", "BackgroundTransparency",
 	"BorderColor3", "BorderSizePixel", "ClipsDescendants", "Draggable", "NextSelectionDown",
 	"NextSelectionLeft", "NextSelectionRight", "NextSelectionUp", "Position", "Rotation",
-	"Selectable", "SelectionImageObject", "Size", "Visible", "ZIndex"
+	"Selectable", "SelectionImageObject", "Size", "Visible", "ZIndex", "Parent"
 }
 
 local readOnlyProperties = {
