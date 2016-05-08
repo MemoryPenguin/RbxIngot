@@ -18,12 +18,10 @@ pages:
   - Home: 'index.md'
   - Using Components: 'using.md'
   - Components:
-    - 'Dropdown': 'Components/dropdown.md'
+    - 'Dropdown': 'components/dropdown.md'
   - Making Components: 'making.md'
 
 # Options
-use_directory_urls: false
-
 extra:
   version: '0.1.0'
   palette:

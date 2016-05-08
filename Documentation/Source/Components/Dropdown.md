@@ -1,8 +1,8 @@
 # Dropdown Component
 The Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.
-![Dropdown image](/Images/Dropdown-1.png)
+![Dropdown image](/images/dropdown-1.png)
 
-![Dropdown structure](/Images/Dropdown-2.png)
+![Dropdown structure](/images/dropdown-2.png)
 
 ## Properties
 
