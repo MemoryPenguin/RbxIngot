@@ -26,7 +26,7 @@ extra:
   version: '0.1.0'
   palette:
     primary: 'blue grey'
-    accent: 'green'
+    accent: 'lime'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

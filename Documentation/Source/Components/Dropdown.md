@@ -32,10 +32,37 @@ The size of the dropdown's text. This value is used directly for the size of the
 Whether the dropdown is open or not. Defaults to `false`.
 
 ### [Font](http://wiki.roblox.com/index.php?title=API:Enum/Font) SelectedEntryFont
-The font that the dropdown's selected entry uses. Defaults to `SourceSansBold`.
-
-!!! note
-    If this is the same as [Font](#Font), there will be no visual difference between a selected entry and an unselected one.
+The font that the dropdown's selected entry uses. Defaults to `SourceSansBold`. If this is the same as [Font](#Font), there will be no visual difference between a selected entry and an unselected one.
 	
 ### [number](http://wiki.roblox.com/index.php?title=Number) ShownItems
 How many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to `3`.
+
+## Methods
+
+### [TextButton](http://wiki.roblox.com/index.php?title=API:Class/TextButton) GetEntryButton([string](http://wiki.roblox.com/index.php?title=API:String) entryName)
+Returns the TextButton that corresponds to `entryName`, or nil if one does not exist.
+
+### [boolean](http://wiki.roblox.com/index.php?title=API:Boolean) AddEntry([string](http://wiki.roblox.com/index.php?title=API:String) entryName)
+Adds an entry to the dropdown. Returns `true` on success and `false` if the dropdown already has an entry named `entryName`.
+
+### [boolean](http://wiki.roblox.com/index.php?title=API:Boolean) RemoveEntry([string](http://wiki.roblox.com/index.php?title=API:String) entryName)
+Removes an entry from the dropdown. Returns `true` on success and `false` if the dropdown doesn't have an entry named `entryName`.
+
+### [boolean](http://wiki.roblox.com/index.php?title=API:Boolean) HasEntry([string](http://wiki.roblox.com/index.php?title=API:String) entryName)
+Returns whether an entry named `entryName` is within the dropdown.
+
+!!! note
+    This is faster than iterating over [Entries](#Entries) when the only goal is to check whether the dropdown contains an entry.
+
+### [void](http://wiki.roblox.com/index.php?title=API:Nil) AddEntries([array&lt;string&gt;](http://wiki.roblox.com/index.php?title=API:Table) entryNames)
+Adds all the entries within `entryNames` to the dropdown. This does not return a success/failure boolean; additions will fail silently.
+
+## Example
+This example assumes that the Dropdown module has been already loaded and stored in the `Dropdown` variable.
+```lua
+local drop = Dropdown.new(script.Parent)
+
+for i = 1, 10 do
+    drop:AddEntry("Item "..i)
+end
+```
