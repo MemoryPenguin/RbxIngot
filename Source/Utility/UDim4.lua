@@ -9,7 +9,9 @@ function UDim4.new(...)
 	if #args == 8 then
 		x = UDim2.new(args[1], args[2], args[3], args[4])
 		y = UDim2.new(args[5], args[6], args[7], args[8])
-	end	
+	end
+	
+	assert(x and y, "Must supply x and y values.")
 	
 	local self = setmetatable({
 		X = x;
@@ -30,15 +32,12 @@ end
 
 function UDim4:ToVector2(guiObject)
 	if not guiObject.Parent or not guiObject.Parent:IsA("GuiBase2d") then
-		print("nil parent")
 		return Vector2.new(0, 0)
 	end
 	
 	local parentSize = guiObject.Parent.AbsoluteSize
 	local xPosition = (self.X.X.Scale * parentSize.X) + self.X.X.Offset + (self.X.Y.Scale * parentSize.Y) + self.X.Y.Offset
 	local yPosition = (self.Y.X.Scale * parentSize.X) + self.Y.X.Offset + (self.Y.Y.Scale * parentSize.Y) + self.Y.Y.Offset
-	
-	print("udim4 tov2: ", xPosition, yPosition)
 	
 	return Vector2.new(xPosition, yPosition)
 end
