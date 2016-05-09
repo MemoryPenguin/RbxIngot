@@ -21,6 +21,7 @@ pages:
     - 'Dropdown': 'components/dropdown.md'
   - Support Modules:
     - UDim4: 'support/udim4.md'
+    - UDim4Enforcer: 'support/udim4enforcer.md'
   - Making Components: 'making.md'
 
 # Options
@@ -28,7 +29,7 @@ extra:
   version: '0.1.0'
   palette:
     primary: 'blue grey'
-    accent: 'lime'
+    accent: 'purple'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

@@ -72,4 +72,18 @@ function UDim4Enforcer:SetSize(size)
 	self:Enforce()
 end
 
+-- Halts the enforcer.
+function UDim4Enforcer:Destroy()
+	self._objectConnection:disconnect()
+	
+	if self._parentConnection then
+		self._parentConnection:Destroy()
+	end
+	
+	-- Release references
+	self.Object = nil
+	self.Position = nil
+	self.Size = nil
+end
+
 return UDim4Enforcer

@@ -52,7 +52,7 @@ Removes an entry from the dropdown. Returns `true` on success and `false` if the
 Returns whether an entry named `entryName` is within the dropdown.
 
 !!! note
-    This is faster than iterating over [Entries](#Entries) when the only goal is to check whether the dropdown contains an entry.
+    This is faster than iterating over [Entries](#arraystring-entries) when the only goal is to check whether the dropdown contains an entry.
 
 ### [void](http://wiki.roblox.com/index.php?title=API:Nil) AddEntries([array&lt;string&gt;](http://wiki.roblox.com/index.php?title=API:Table) entryNames)
 Adds all the entries within `entryNames` to the dropdown. This does not return a success/failure boolean; additions will fail silently.
