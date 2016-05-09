@@ -70,7 +70,7 @@
   
   
   
-  <body class="palette-primary-blue-grey palette-accent-green">
+  <body class="palette-primary-blue-grey palette-accent-purple">
     
       
       
@@ -219,8 +219,47 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="Methods" href="#methods">
+                Methods
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Example" href="#example">
+                Example
+              </a>
+            </li>
+          
         </ul>
       
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Support Modules</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="UDim4" href="../../support/udim4/">
+      UDim4
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="UDim4Enforcer" href="../../support/udim4enforcer/">
+      UDim4Enforcer
+    </a>
     
   </li>
 
@@ -274,10 +313,9 @@
 <img alt="Dropdown image" src="../../images/dropdown-1.png" /></p>
 <p><img alt="Dropdown structure" src="../../images/dropdown-2.png" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
+<p><em>Dropdown supports all GuiObject properties, For brevity, they have not been listed here.</em></p>
 <h3 id="number-animationtime"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> AnimationTime<a class="headerlink" href="#number-animationtime" title="Permanent link">#</a></h3>
 <p>How long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to <code>0.3</code>.</p>
-<h3 id="color3-bordercolor3"><a href="http://wiki.roblox.com/index.php?title=API:Color3">Color3</a> BorderColor3<a class="headerlink" href="#color3-bordercolor3" title="Permanent link">#</a></h3>
-<p>The color of the dropdown's borders.</p>
 <h3 id="boolean-closeonoptionselected"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> CloseOnOptionSelected<a class="headerlink" href="#boolean-closeonoptionselected" title="Permanent link">#</a></h3>
 <p>Whether to close the dropdown when an option is selected. Defaults to <code>true</code>.</p>
 <h3 id="string-currententry"><a href="http://wiki.roblox.com/index.php?title=API:String">string</a> CurrentEntry<a class="headerlink" href="#string-currententry" title="Permanent link">#</a></h3>
@@ -295,15 +333,31 @@
 <h3 id="boolean-open"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> Open<a class="headerlink" href="#boolean-open" title="Permanent link">#</a></h3>
 <p>Whether the dropdown is open or not. Defaults to <code>false</code>.</p>
 <h3 id="font-selectedentryfont"><a href="http://wiki.roblox.com/index.php?title=API:Enum/Font">Font</a> SelectedEntryFont<a class="headerlink" href="#font-selectedentryfont" title="Permanent link">#</a></h3>
-<p>The font that the dropdown's selected entry uses. Defaults to <code>SourceSansBold</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If this is the same as <a href="#Font">Font</a>, there will be no visual difference between a selected entry and an unselected one.</p>
-</div>
+<p>The font that the dropdown's selected entry uses. Defaults to <code>SourceSansBold</code>. If this is the same as <a href="#Font">Font</a>, there will be no visual difference between a selected entry and an unselected one.</p>
 <h3 id="number-shownitems"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> ShownItems<a class="headerlink" href="#number-shownitems" title="Permanent link">#</a></h3>
 <p>How many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to <code>3</code>.</p>
-<h3 id="number-zindex"><a href="http://wiki.roblox.com/index.php?title=Number">number</a> ZIndex<a class="headerlink" href="#number-zindex" title="Permanent link">#</a></h3>
-<p>The z-index of the dropdown. Defaults to <code>1</code>.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
+<h3 id="textbutton-getentrybuttonstring-entryname"><a href="http://wiki.roblox.com/index.php?title=API:Class/TextButton">TextButton</a> GetEntryButton(<a href="http://wiki.roblox.com/index.php?title=API:String">string</a> entryName)<a class="headerlink" href="#textbutton-getentrybuttonstring-entryname" title="Permanent link">#</a></h3>
+<p>Returns the TextButton that corresponds to <code>entryName</code>, or nil if one does not exist.</p>
+<h3 id="boolean-addentrystring-entryname"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> AddEntry(<a href="http://wiki.roblox.com/index.php?title=API:String">string</a> entryName)<a class="headerlink" href="#boolean-addentrystring-entryname" title="Permanent link">#</a></h3>
+<p>Adds an entry to the dropdown. Returns <code>true</code> on success and <code>false</code> if the dropdown already has an entry named <code>entryName</code>.</p>
+<h3 id="boolean-removeentrystring-entryname"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> RemoveEntry(<a href="http://wiki.roblox.com/index.php?title=API:String">string</a> entryName)<a class="headerlink" href="#boolean-removeentrystring-entryname" title="Permanent link">#</a></h3>
+<p>Removes an entry from the dropdown. Returns <code>true</code> on success and <code>false</code> if the dropdown doesn't have an entry named <code>entryName</code>.</p>
+<h3 id="boolean-hasentrystring-entryname"><a href="http://wiki.roblox.com/index.php?title=API:Boolean">boolean</a> HasEntry(<a href="http://wiki.roblox.com/index.php?title=API:String">string</a> entryName)<a class="headerlink" href="#boolean-hasentrystring-entryname" title="Permanent link">#</a></h3>
+<p>Returns whether an entry named <code>entryName</code> is within the dropdown.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is faster than iterating over <a href="#arraystring-entries">Entries</a> when the only goal is to check whether the dropdown contains an entry.</p>
+</div>
+<h3 id="void-addentriesarraystring-entrynames"><a href="http://wiki.roblox.com/index.php?title=API:Nil">void</a> AddEntries(<a href="http://wiki.roblox.com/index.php?title=API:Table">array&lt;string&gt;</a> entryNames)<a class="headerlink" href="#void-addentriesarraystring-entrynames" title="Permanent link">#</a></h3>
+<p>Adds all the entries within <code>entryNames</code> to the dropdown. This does not return a success/failure boolean; additions will fail silently.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h2>
+<p>This example assumes that the Dropdown module has been already loaded and stored in the <code>Dropdown</code> variable.</p>
+<pre class="code"><code class="language-lua">local drop = Dropdown.new(script.Parent)
+
+for i = 1, 10 do
+    drop:AddEntry(&quot;Item &quot;..i)
+end</code></pre>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -339,14 +393,14 @@
     </div>
     <div class="next">
       
-        <a href="../../making/" title="Making Components">
+        <a href="../../support/udim4/" title="UDim4">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Making Components
+                UDim4
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

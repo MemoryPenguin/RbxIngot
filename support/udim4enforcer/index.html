@@ -9,45 +9,45 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Making Components - Ingot Documentation</title>
+        <title>UDim4Enforcer - Ingot Documentation</title>
       
       
       
-        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/making/">
+        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/support/udim4enforcer/">
       
       
         <meta name="author" content="MemoryPenguin">
       
     
-    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/making/">
+    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/support/udim4enforcer/">
     <meta property="og:title" content="Ingot Documentation">
-    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot/making//../">
+    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot/support/udim4enforcer//../../">
     <meta name="apple-mobile-web-app-title" content="Ingot Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../None">
-    <link rel="icon" type="image/x-icon" href="../None">
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('../assets/fonts/icon.eot?52m981');
-      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('../assets/fonts/icon.woff?52m981')
+      		   url('../../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('../assets/fonts/icon.ttf?52m981')
+      		   url('../../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('../assets/fonts/icon.svg?52m981#icon')
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application-54f87043f3.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
     
     
       
@@ -64,7 +64,7 @@
       </style>
     
     
-    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
@@ -94,9 +94,13 @@
         
           <span class="path">
             
+              
+                Support Modules <i class="icon icon-link"></i>
+              
+            
           </span>
         
-        Making Components
+        UDim4Enforcer
       </div>
     </div>
     
@@ -176,7 +180,7 @@
           
             
   <li>
-    <a class="" title="Home" href="..">
+    <a class="" title="Home" href="../..">
       Home
     </a>
     
@@ -185,7 +189,7 @@
           
             
   <li>
-    <a class="" title="Using Components" href="../using/">
+    <a class="" title="Using Components" href="../../using/">
       Using Components
     </a>
     
@@ -199,7 +203,7 @@
       
         
   <li>
-    <a class="" title="Dropdown" href="../components/dropdown/">
+    <a class="" title="Dropdown" href="../../components/dropdown/">
       Dropdown
     </a>
     
@@ -217,7 +221,7 @@
       
         
   <li>
-    <a class="" title="UDim4" href="../support/udim4/">
+    <a class="" title="UDim4" href="../udim4/">
       UDim4
     </a>
     
@@ -226,9 +230,42 @@
       
         
   <li>
-    <a class="" title="UDim4Enforcer" href="../support/udim4enforcer/">
+    <a class="current" title="UDim4Enforcer" href="./">
       UDim4Enforcer
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Constructors" href="#constructors">
+                Constructors
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Properties" href="#properties">
+                Properties
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Methods" href="#methods">
+                Methods
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Example" href="#example">
+                Example
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -239,14 +276,9 @@
           
             
   <li>
-    <a class="current" title="Making Components" href="./">
+    <a class="" title="Making Components" href="../../making/">
       Making Components
     </a>
-    
-      
-        
-      
-      
     
   </li>
 
@@ -282,8 +314,36 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="making-components">Making Components<a class="headerlink" href="#making-components" title="Permanent link">#</a></h1>
-<p>TODO</p>
+          <h1 id="udim4enforcer">UDim4Enforcer<a class="headerlink" href="#udim4enforcer" title="Permanent link">#</a></h1>
+<p>The UDim4Enforcer class is designed to assist in applying a <a href="../udim4/">UDim4</a> value to a GuiObject's <a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Position">Position</a> and <a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Size">Size</a> properties. It will automatically apply UDim4s to the object and keep them up to date until it is destroyed.</p>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h2>
+<h3 id="udim4enforcernewguiobject-object-udim4-position-udim4-size">UDim4Enforcer.new(<a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject">GuiObject</a> object, <a href="../udim4/">UDim4</a> position, <a href="../udim4/">UDim4</a> size)<a class="headerlink" href="#udim4enforcernewguiobject-object-udim4-position-udim4-size" title="Permanent link">#</a></h3>
+<p>Creates a new UDim4Enforcer for <code>object</code> with position <code>position</code> and size <code>size</code>. If either <code>position</code> or <code>size</code> are <code>nil</code>, the corresponding properties of the GuiObject will not be changed when the enforcer acts.</p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not set any of these properties! Use SetPosition and SetSize to change Position and Size - Object should never be changed.</p>
+</div>
+<h3 id="guiobject-object"><a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject">GuiObject</a> Object<a class="headerlink" href="#guiobject-object" title="Permanent link">#</a></h3>
+<p>The object the UDim4Enforcer is acting upon.</p>
+<h3 id="udim4-position"><a href="../udim4/">UDim4</a> Position<a class="headerlink" href="#udim4-position" title="Permanent link">#</a></h3>
+<p>The position to set the object to.</p>
+<h3 id="udim4-size"><a href="../udim4/">UDim4</a> Size<a class="headerlink" href="#udim4-size" title="Permanent link">#</a></h3>
+<p>The size to set the object to.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
+<h3 id="void-setpositionudim4-position"><a href="http://wiki.roblox.com/index.php?title=API:Nil">void</a> SetPosition(<a href="../udim4/">UDim4</a> position)<a class="headerlink" href="#void-setpositionudim4-position" title="Permanent link">#</a></h3>
+<p>Sets the position UDim4 and applies it to the object.</p>
+<h3 id="void-setsizeudim4-size"><a href="http://wiki.roblox.com/index.php?title=API:Nil">void</a> SetSize(<a href="../udim4/">UDim4</a> size)<a class="headerlink" href="#void-setsizeudim4-size" title="Permanent link">#</a></h3>
+<p>Sets the size UDim4 and applies it to the object.</p>
+<h3 id="void-enforce"><a href="http://wiki.roblox.com/index.php?title=API:Nil">void</a> Enforce()<a class="headerlink" href="#void-enforce" title="Permanent link">#</a></h3>
+<p>Enforces the position and size UDim4s on the object.</p>
+<h3 id="void-destroy"><a href="http://wiki.roblox.com/index.php?title=API:Nil">void</a> Destroy()<a class="headerlink" href="#void-destroy" title="Permanent link">#</a></h3>
+<p>Halts the enforcer and releases all resources it contains. The enforcer is unusable after this.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h2>
+<p>This example assumes that the UDim4 and UDim4Enforcer modules have been loaded into variables of the same name.</p>
+<pre class="code"><code class="language-lua">local position = UDim4.new(UDim2.new(0, 0, 1, 0), UDim2.new(0, 0, 0, 0))
+local size = UDim4.new(UDim2.new(1, 0, -1, 0), UDim2.new(0, 0, 1, 0))
+local enforcer = UDim4Enforcer.new(script.Parent, position, size)</code></pre>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -300,7 +360,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../support/udim4enforcer/" title="UDim4Enforcer">
+        <a href="../udim4/" title="UDim4">
           <span class="direction">
             Previous
           </span>
@@ -310,7 +370,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                UDim4Enforcer
+                UDim4
               </div>
             </div>
           </div>
@@ -318,6 +378,22 @@
       
     </div>
     <div class="next">
+      
+        <a href="../../making/" title="Making Components">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Making Components
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
@@ -336,10 +412,10 @@
       </div>
     </main>
     <script>
-      var base_url = '..';
+      var base_url = '../..';
       var repo_id  = 'MemoryPenguin/RbxIngot';
     </script>
-    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
     
     
   </body>

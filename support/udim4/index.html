@@ -9,45 +9,45 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Making Components - Ingot Documentation</title>
+        <title>UDim4 - Ingot Documentation</title>
       
       
       
-        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/making/">
+        <link rel="canonical" href="https://memorypenguin.github.io/RbxIngot/support/udim4/">
       
       
         <meta name="author" content="MemoryPenguin">
       
     
-    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/making/">
+    <meta property="og:url" content="https://memorypenguin.github.io/RbxIngot/support/udim4/">
     <meta property="og:title" content="Ingot Documentation">
-    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot/making//../">
+    <meta property="og:image" content="https://memorypenguin.github.io/RbxIngot/support/udim4//../../">
     <meta name="apple-mobile-web-app-title" content="Ingot Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../None">
-    <link rel="icon" type="image/x-icon" href="../None">
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('../assets/fonts/icon.eot?52m981');
-      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('../assets/fonts/icon.woff?52m981')
+      		   url('../../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('../assets/fonts/icon.ttf?52m981')
+      		   url('../../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('../assets/fonts/icon.svg?52m981#icon')
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/application-54f87043f3.css">
     
-      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
     
     
       
@@ -64,7 +64,7 @@
       </style>
     
     
-    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
@@ -94,9 +94,13 @@
         
           <span class="path">
             
+              
+                Support Modules <i class="icon icon-link"></i>
+              
+            
           </span>
         
-        Making Components
+        UDim4
       </div>
     </div>
     
@@ -176,7 +180,7 @@
           
             
   <li>
-    <a class="" title="Home" href="..">
+    <a class="" title="Home" href="../..">
       Home
     </a>
     
@@ -185,7 +189,7 @@
           
             
   <li>
-    <a class="" title="Using Components" href="../using/">
+    <a class="" title="Using Components" href="../../using/">
       Using Components
     </a>
     
@@ -199,7 +203,7 @@
       
         
   <li>
-    <a class="" title="Dropdown" href="../components/dropdown/">
+    <a class="" title="Dropdown" href="../../components/dropdown/">
       Dropdown
     </a>
     
@@ -217,16 +221,43 @@
       
         
   <li>
-    <a class="" title="UDim4" href="../support/udim4/">
+    <a class="current" title="UDim4" href="./">
       UDim4
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Constructors" href="#constructors">
+                Constructors
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Properties" href="#properties">
+                Properties
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Methods" href="#methods">
+                Methods
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
       
         
   <li>
-    <a class="" title="UDim4Enforcer" href="../support/udim4enforcer/">
+    <a class="" title="UDim4Enforcer" href="../udim4enforcer/">
       UDim4Enforcer
     </a>
     
@@ -239,14 +270,9 @@
           
             
   <li>
-    <a class="current" title="Making Components" href="./">
+    <a class="" title="Making Components" href="../../making/">
       Making Components
     </a>
-    
-      
-        
-      
-      
     
   </li>
 
@@ -282,8 +308,22 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="making-components">Making Components<a class="headerlink" href="#making-components" title="Permanent link">#</a></h1>
-<p>TODO</p>
+          <h1 id="udim4">UDim4<a class="headerlink" href="#udim4" title="Permanent link">#</a></h1>
+<p>The UDim4 type describes a position where each axis is described by a UDim2. This means that you can position something on the X axis based on the parent's Y size, for instance. UDim4 is contained within the Utility folder of Ingot.</p>
+<p>Consider this example: a dynamically resizing container on both axes with an icon that stays as tall as its parent (and as wide as it is tall) via <a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject/SizeConstraint">SizeConstraint</a>. If you want to put something to the right of that icon, you cannot guarantee that it will remain to the right - the icon might overlap it on some aspect ratios. UDim4 can solve this.</p>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">#</a></h2>
+<h3 id="udim4newudim2-x-udim2-y">UDim4.new(<a href="http://wiki.roblox.com/index.php?title=API:UDim2">UDim2</a> x, <a href="http://wiki.roblox.com/index.php?title=API:UDim2">UDim2</a> y)<a class="headerlink" href="#udim4newudim2-x-udim2-y" title="Permanent link">#</a></h3>
+<p>Creates a new UDim4, using <code>x</code> and <code>y</code> as the X and Y values.</p>
+<h3 id="udim4fromcoordinatesnumber-xxscale-number-xxoffset-number-xyscale-number-xyoffset-number-yxscale-number-yyoffset-number-yyscale-number-yyoffset">UDim4.FromCoordinates(<a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> xXScale, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> xXOffset, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> xYScale, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> xYOffset, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> yXScale, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> yYOffset, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> yYScale, <a href="http://wiki.roblox.com/index.php?title=API:Number">number</a> yYOffset)<a class="headerlink" href="#udim4fromcoordinatesnumber-xxscale-number-xxoffset-number-xyscale-number-xyoffset-number-yxscale-number-yyoffset-number-yyscale-number-yyoffset" title="Permanent link">#</a></h3>
+<p>Creates a new UDim4, using the various values to construct UDim2 values as the X and Y values.</p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
+<h3 id="udim2-x"><a href="http://wiki.roblox.com/index.php?title=API:UDim2">UDim2</a> X<a class="headerlink" href="#udim2-x" title="Permanent link">#</a></h3>
+<p>The X coordinate of the UDim4.</p>
+<h3 id="udim2-y"><a href="http://wiki.roblox.com/index.php?title=API:UDim2">UDim2</a> Y<a class="headerlink" href="#udim2-y" title="Permanent link">#</a></h3>
+<p>The Y coordinate of the UDim4.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h2>
+<h3 id="vector2-tovector2guiobject-guiobject"><a href="http://wiki.roblox.com/index.php?title=API:Vector2">Vector2</a> ToVector2(<a href="http://wiki.roblox.com/index.php?title=API:Class/GuiObject">GuiObject</a> guiObject)<a class="headerlink" href="#vector2-tovector2guiobject-guiobject" title="Permanent link">#</a></h3>
+<p>Returns the absolute value (in pixels) of the UDim4, relative to the parent of <code>guiObject</code>. If <code>guiObject</code> is parented to <code>nil</code>, a zeroed Vector2 (<code>0, 0</code>) is returned.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -300,7 +340,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../support/udim4enforcer/" title="UDim4Enforcer">
+        <a href="../../components/dropdown/" title="Dropdown">
           <span class="direction">
             Previous
           </span>
@@ -310,7 +350,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                UDim4Enforcer
+                Dropdown
               </div>
             </div>
           </div>
@@ -318,6 +358,22 @@
       
     </div>
     <div class="next">
+      
+        <a href="../udim4enforcer/" title="UDim4Enforcer">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                UDim4Enforcer
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
@@ -336,10 +392,10 @@
       </div>
     </main>
     <script>
-      var base_url = '..';
+      var base_url = '../..';
       var repo_id  = 'MemoryPenguin/RbxIngot';
     </script>
-    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
     
     
   </body>

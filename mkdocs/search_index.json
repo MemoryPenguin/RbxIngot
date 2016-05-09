@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/components/dropdown/", 
-            "text": "Dropdown Component\n#\n\n\nThe Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.\n\n\n\n\n\nProperties\n#\n\n\nnumber\n AnimationTime\n#\n\n\nHow long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to \n0.3\n.\n\n\nColor3\n BorderColor3\n#\n\n\nThe color of the dropdown's borders.\n\n\nboolean\n CloseOnOptionSelected\n#\n\n\nWhether to close the dropdown when an option is selected. Defaults to \ntrue\n.\n\n\nstring\n CurrentEntry\n#\n\n\nThe currently selected item, or nil if it does not exist. Setting this will select the item corresponding to the string, or error if it does not exist. Defaults to \nnil\n.\n\n\narray\nstring\n Entries\n#\n\n\nThe entries of the dropdown. Setting this value will remove all entries from the dropdown, then add all the entries in the assigned value.\n\n\n\n\nNote\n\n\nModifying this value via \ntable.insert\n will not add or remove entries from the dropdown. To modify entries, use \nAddEntry\n and \nRemoveEntry\n.\n\n\n\n\nFont\n Font\n#\n\n\nThe font the dropdown uses. Defaults to \nSourceSans\n.\n\n\nFontSize\n FontSize\n#\n\n\nThe size of the dropdown's text. This value is used directly for the size of the dropdown's current item text, and the value immediately below it is used as the item entry font size. For example, if this property is set to \nSize24\n, the current item text will have a font size of \nSize24\n and the item entries will have a font size of \nSize18\n. Defaults to \nSize24\n.\n\n\nboolean\n Open\n#\n\n\nWhether the dropdown is open or not. Defaults to \nfalse\n.\n\n\nFont\n SelectedEntryFont\n#\n\n\nThe font that the dropdown's selected entry uses. Defaults to \nSourceSansBold\n.\n\n\n\n\nNote\n\n\nIf this is the same as \nFont\n, there will be no visual difference between a selected entry and an unselected one.\n\n\n\n\nnumber\n ShownItems\n#\n\n\nHow many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to \n3\n.\n\n\nnumber\n ZIndex\n#\n\n\nThe z-index of the dropdown. Defaults to \n1\n.", 
+            "text": "Dropdown Component\n#\n\n\nThe Dropdown component is a simple dropdown that supports selection of one item from a large amount of choices.\n\n\n\n\n\nProperties\n#\n\n\nDropdown supports all GuiObject properties, For brevity, they have not been listed here.\n\n\nnumber\n AnimationTime\n#\n\n\nHow long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to \n0.3\n.\n\n\nboolean\n CloseOnOptionSelected\n#\n\n\nWhether to close the dropdown when an option is selected. Defaults to \ntrue\n.\n\n\nstring\n CurrentEntry\n#\n\n\nThe currently selected item, or nil if it does not exist. Setting this will select the item corresponding to the string, or error if it does not exist. Defaults to \nnil\n.\n\n\narray\nstring\n Entries\n#\n\n\nThe entries of the dropdown. Setting this value will remove all entries from the dropdown, then add all the entries in the assigned value.\n\n\n\n\nNote\n\n\nModifying this value via \ntable.insert\n will not add or remove entries from the dropdown. To modify entries, use \nAddEntry\n and \nRemoveEntry\n.\n\n\n\n\nFont\n Font\n#\n\n\nThe font the dropdown uses. Defaults to \nSourceSans\n.\n\n\nFontSize\n FontSize\n#\n\n\nThe size of the dropdown's text. This value is used directly for the size of the dropdown's current item text, and the value immediately below it is used as the item entry font size. For example, if this property is set to \nSize24\n, the current item text will have a font size of \nSize24\n and the item entries will have a font size of \nSize18\n. Defaults to \nSize24\n.\n\n\nboolean\n Open\n#\n\n\nWhether the dropdown is open or not. Defaults to \nfalse\n.\n\n\nFont\n SelectedEntryFont\n#\n\n\nThe font that the dropdown's selected entry uses. Defaults to \nSourceSansBold\n. If this is the same as \nFont\n, there will be no visual difference between a selected entry and an unselected one.\n\n\nnumber\n ShownItems\n#\n\n\nHow many options, at most, should be shown at once when the dropdown is open. Excess options will be wrapped in a scrolling frame. Defaults to \n3\n.\n\n\nMethods\n#\n\n\nTextButton\n GetEntryButton(\nstring\n entryName)\n#\n\n\nReturns the TextButton that corresponds to \nentryName\n, or nil if one does not exist.\n\n\nboolean\n AddEntry(\nstring\n entryName)\n#\n\n\nAdds an entry to the dropdown. Returns \ntrue\n on success and \nfalse\n if the dropdown already has an entry named \nentryName\n.\n\n\nboolean\n RemoveEntry(\nstring\n entryName)\n#\n\n\nRemoves an entry from the dropdown. Returns \ntrue\n on success and \nfalse\n if the dropdown doesn't have an entry named \nentryName\n.\n\n\nboolean\n HasEntry(\nstring\n entryName)\n#\n\n\nReturns whether an entry named \nentryName\n is within the dropdown.\n\n\n\n\nNote\n\n\nThis is faster than iterating over \nEntries\n when the only goal is to check whether the dropdown contains an entry.\n\n\n\n\nvoid\n AddEntries(\narray\nstring\n entryNames)\n#\n\n\nAdds all the entries within \nentryNames\n to the dropdown. This does not return a success/failure boolean; additions will fail silently.\n\n\nExample\n#\n\n\nThis example assumes that the Dropdown module has been already loaded and stored in the \nDropdown\n variable.\n\n\nlocal drop = Dropdown.new(script.Parent)\n\nfor i = 1, 10 do\n    drop:AddEntry(\nItem \n..i)\nend", 
             "title": "Dropdown"
         }, 
         {
@@ -32,18 +32,13 @@
         }, 
         {
             "location": "/components/dropdown/#properties", 
-            "text": "", 
+            "text": "Dropdown supports all GuiObject properties, For brevity, they have not been listed here.", 
             "title": "Properties"
         }, 
         {
             "location": "/components/dropdown/#number-animationtime", 
             "text": "How long the dropdown's opening animation will take. If zero, no animation takes place. Defaults to  0.3 .", 
             "title": "number AnimationTime"
-        }, 
-        {
-            "location": "/components/dropdown/#color3-bordercolor3", 
-            "text": "The color of the dropdown's borders.", 
-            "title": "Color3 BorderColor3"
         }, 
         {
             "location": "/components/dropdown/#boolean-closeonoptionselected", 
@@ -77,7 +72,7 @@
         }, 
         {
             "location": "/components/dropdown/#font-selectedentryfont", 
-            "text": "The font that the dropdown's selected entry uses. Defaults to  SourceSansBold .   Note  If this is the same as  Font , there will be no visual difference between a selected entry and an unselected one.", 
+            "text": "The font that the dropdown's selected entry uses. Defaults to  SourceSansBold . If this is the same as  Font , there will be no visual difference between a selected entry and an unselected one.", 
             "title": "Font SelectedEntryFont"
         }, 
         {
@@ -86,9 +81,159 @@
             "title": "number ShownItems"
         }, 
         {
-            "location": "/components/dropdown/#number-zindex", 
-            "text": "The z-index of the dropdown. Defaults to  1 .", 
-            "title": "number ZIndex"
+            "location": "/components/dropdown/#methods", 
+            "text": "", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/components/dropdown/#textbutton-getentrybuttonstring-entryname", 
+            "text": "Returns the TextButton that corresponds to  entryName , or nil if one does not exist.", 
+            "title": "TextButton GetEntryButton(string entryName)"
+        }, 
+        {
+            "location": "/components/dropdown/#boolean-addentrystring-entryname", 
+            "text": "Adds an entry to the dropdown. Returns  true  on success and  false  if the dropdown already has an entry named  entryName .", 
+            "title": "boolean AddEntry(string entryName)"
+        }, 
+        {
+            "location": "/components/dropdown/#boolean-removeentrystring-entryname", 
+            "text": "Removes an entry from the dropdown. Returns  true  on success and  false  if the dropdown doesn't have an entry named  entryName .", 
+            "title": "boolean RemoveEntry(string entryName)"
+        }, 
+        {
+            "location": "/components/dropdown/#boolean-hasentrystring-entryname", 
+            "text": "Returns whether an entry named  entryName  is within the dropdown.   Note  This is faster than iterating over  Entries  when the only goal is to check whether the dropdown contains an entry.", 
+            "title": "boolean HasEntry(string entryName)"
+        }, 
+        {
+            "location": "/components/dropdown/#void-addentriesarraystring-entrynames", 
+            "text": "Adds all the entries within  entryNames  to the dropdown. This does not return a success/failure boolean; additions will fail silently.", 
+            "title": "void AddEntries(array&lt;string&gt; entryNames)"
+        }, 
+        {
+            "location": "/components/dropdown/#example", 
+            "text": "This example assumes that the Dropdown module has been already loaded and stored in the  Dropdown  variable.  local drop = Dropdown.new(script.Parent)\n\nfor i = 1, 10 do\n    drop:AddEntry( Item  ..i)\nend", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/support/udim4/", 
+            "text": "UDim4\n#\n\n\nThe UDim4 type describes a position where each axis is described by a UDim2. This means that you can position something on the X axis based on the parent's Y size, for instance. UDim4 is contained within the Utility folder of Ingot.\n\n\nConsider this example: a dynamically resizing container on both axes with an icon that stays as tall as its parent (and as wide as it is tall) via \nSizeConstraint\n. If you want to put something to the right of that icon, you cannot guarantee that it will remain to the right - the icon might overlap it on some aspect ratios. UDim4 can solve this.\n\n\nConstructors\n#\n\n\nUDim4.new(\nUDim2\n x, \nUDim2\n y)\n#\n\n\nCreates a new UDim4, using \nx\n and \ny\n as the X and Y values.\n\n\nUDim4.FromCoordinates(\nnumber\n xXScale, \nnumber\n xXOffset, \nnumber\n xYScale, \nnumber\n xYOffset, \nnumber\n yXScale, \nnumber\n yYOffset, \nnumber\n yYScale, \nnumber\n yYOffset)\n#\n\n\nCreates a new UDim4, using the various values to construct UDim2 values as the X and Y values.\n\n\nProperties\n#\n\n\nUDim2\n X\n#\n\n\nThe X coordinate of the UDim4.\n\n\nUDim2\n Y\n#\n\n\nThe Y coordinate of the UDim4.\n\n\nMethods\n#\n\n\nVector2\n ToVector2(\nGuiObject\n guiObject)\n#\n\n\nReturns the absolute value (in pixels) of the UDim4, relative to the parent of \nguiObject\n. If \nguiObject\n is parented to \nnil\n, a zeroed Vector2 (\n0, 0\n) is returned.", 
+            "title": "UDim4"
+        }, 
+        {
+            "location": "/support/udim4/#udim4", 
+            "text": "The UDim4 type describes a position where each axis is described by a UDim2. This means that you can position something on the X axis based on the parent's Y size, for instance. UDim4 is contained within the Utility folder of Ingot.  Consider this example: a dynamically resizing container on both axes with an icon that stays as tall as its parent (and as wide as it is tall) via  SizeConstraint . If you want to put something to the right of that icon, you cannot guarantee that it will remain to the right - the icon might overlap it on some aspect ratios. UDim4 can solve this.", 
+            "title": "UDim4"
+        }, 
+        {
+            "location": "/support/udim4/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/support/udim4/#udim4newudim2-x-udim2-y", 
+            "text": "Creates a new UDim4, using  x  and  y  as the X and Y values.", 
+            "title": "UDim4.new(UDim2 x, UDim2 y)"
+        }, 
+        {
+            "location": "/support/udim4/#udim4fromcoordinatesnumber-xxscale-number-xxoffset-number-xyscale-number-xyoffset-number-yxscale-number-yyoffset-number-yyscale-number-yyoffset", 
+            "text": "Creates a new UDim4, using the various values to construct UDim2 values as the X and Y values.", 
+            "title": "UDim4.FromCoordinates(number xXScale, number xXOffset, number xYScale, number xYOffset, number yXScale, number yYOffset, number yYScale, number yYOffset)"
+        }, 
+        {
+            "location": "/support/udim4/#properties", 
+            "text": "", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/support/udim4/#udim2-x", 
+            "text": "The X coordinate of the UDim4.", 
+            "title": "UDim2 X"
+        }, 
+        {
+            "location": "/support/udim4/#udim2-y", 
+            "text": "The Y coordinate of the UDim4.", 
+            "title": "UDim2 Y"
+        }, 
+        {
+            "location": "/support/udim4/#methods", 
+            "text": "", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/support/udim4/#vector2-tovector2guiobject-guiobject", 
+            "text": "Returns the absolute value (in pixels) of the UDim4, relative to the parent of  guiObject . If  guiObject  is parented to  nil , a zeroed Vector2 ( 0, 0 ) is returned.", 
+            "title": "Vector2 ToVector2(GuiObject guiObject)"
+        }, 
+        {
+            "location": "/support/udim4enforcer/", 
+            "text": "UDim4Enforcer\n#\n\n\nThe UDim4Enforcer class is designed to assist in applying a \nUDim4\n value to a GuiObject's \nPosition\n and \nSize\n properties. It will automatically apply UDim4s to the object and keep them up to date until it is destroyed.\n\n\nConstructors\n#\n\n\nUDim4Enforcer.new(\nGuiObject\n object, \nUDim4\n position, \nUDim4\n size)\n#\n\n\nCreates a new UDim4Enforcer for \nobject\n with position \nposition\n and size \nsize\n. If either \nposition\n or \nsize\n are \nnil\n, the corresponding properties of the GuiObject will not be changed when the enforcer acts.\n\n\nProperties\n#\n\n\n\n\nWarning\n\n\nDo not set any of these properties! Use SetPosition and SetSize to change Position and Size - Object should never be changed.\n\n\n\n\nGuiObject\n Object\n#\n\n\nThe object the UDim4Enforcer is acting upon.\n\n\nUDim4\n Position\n#\n\n\nThe position to set the object to.\n\n\nUDim4\n Size\n#\n\n\nThe size to set the object to.\n\n\nMethods\n#\n\n\nvoid\n SetPosition(\nUDim4\n position)\n#\n\n\nSets the position UDim4 and applies it to the object.\n\n\nvoid\n SetSize(\nUDim4\n size)\n#\n\n\nSets the size UDim4 and applies it to the object.\n\n\nvoid\n Enforce()\n#\n\n\nEnforces the position and size UDim4s on the object.\n\n\nvoid\n Destroy()\n#\n\n\nHalts the enforcer and releases all resources it contains. The enforcer is unusable after this.\n\n\nExample\n#\n\n\nThis example assumes that the UDim4 and UDim4Enforcer modules have been loaded into variables of the same name.\n\n\nlocal position = UDim4.new(UDim2.new(0, 0, 1, 0), UDim2.new(0, 0, 0, 0))\nlocal size = UDim4.new(UDim2.new(1, 0, -1, 0), UDim2.new(0, 0, 1, 0))\nlocal enforcer = UDim4Enforcer.new(script.Parent, position, size)", 
+            "title": "UDim4Enforcer"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#udim4enforcer", 
+            "text": "The UDim4Enforcer class is designed to assist in applying a  UDim4  value to a GuiObject's  Position  and  Size  properties. It will automatically apply UDim4s to the object and keep them up to date until it is destroyed.", 
+            "title": "UDim4Enforcer"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#udim4enforcernewguiobject-object-udim4-position-udim4-size", 
+            "text": "Creates a new UDim4Enforcer for  object  with position  position  and size  size . If either  position  or  size  are  nil , the corresponding properties of the GuiObject will not be changed when the enforcer acts.", 
+            "title": "UDim4Enforcer.new(GuiObject object, UDim4 position, UDim4 size)"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#properties", 
+            "text": "Warning  Do not set any of these properties! Use SetPosition and SetSize to change Position and Size - Object should never be changed.", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#guiobject-object", 
+            "text": "The object the UDim4Enforcer is acting upon.", 
+            "title": "GuiObject Object"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#udim4-position", 
+            "text": "The position to set the object to.", 
+            "title": "UDim4 Position"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#udim4-size", 
+            "text": "The size to set the object to.", 
+            "title": "UDim4 Size"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#methods", 
+            "text": "", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#void-setpositionudim4-position", 
+            "text": "Sets the position UDim4 and applies it to the object.", 
+            "title": "void SetPosition(UDim4 position)"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#void-setsizeudim4-size", 
+            "text": "Sets the size UDim4 and applies it to the object.", 
+            "title": "void SetSize(UDim4 size)"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#void-enforce", 
+            "text": "Enforces the position and size UDim4s on the object.", 
+            "title": "void Enforce()"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#void-destroy", 
+            "text": "Halts the enforcer and releases all resources it contains. The enforcer is unusable after this.", 
+            "title": "void Destroy()"
+        }, 
+        {
+            "location": "/support/udim4enforcer/#example", 
+            "text": "This example assumes that the UDim4 and UDim4Enforcer modules have been loaded into variables of the same name.  local position = UDim4.new(UDim2.new(0, 0, 1, 0), UDim2.new(0, 0, 0, 0))\nlocal size = UDim4.new(UDim2.new(1, 0, -1, 0), UDim2.new(0, 0, 1, 0))\nlocal enforcer = UDim4Enforcer.new(script.Parent, position, size)", 
+            "title": "Example"
         }, 
         {
             "location": "/making/", 
