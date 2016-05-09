@@ -62,4 +62,14 @@ function UDim4Enforcer:Enforce()
 	object.Size = UDim2.new(0, size.X, 0, size.Y)
 end
 
+function UDim4Enforcer:SetPosition(position)
+	self.Position = position
+	self:Enforce()
+end
+
+function UDim4Enforcer:SetSize(size)
+	self.Size = size
+	self:Enforce()
+end
+
 return UDim4Enforcer

@@ -19,6 +19,8 @@ pages:
   - Using Components: 'using.md'
   - Components:
     - 'Dropdown': 'components/dropdown.md'
+  - Support Modules:
+    - UDim4: 'support/udim4.md'
   - Making Components: 'making.md'
 
 # Options

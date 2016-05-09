@@ -42,4 +42,12 @@ function UDim4:ToVector2(guiObject)
 	return Vector2.new(xPosition, yPosition)
 end
 
+function UDim4:__add(other)
+	return UDim4.new(self.X + other.X, self.Y + other.Y)
+end
+
+function UDim4:__sub(other)
+	return UDim4.new(self.X - other.X, self.Y - other.Y)
+end
+
 return UDim4
