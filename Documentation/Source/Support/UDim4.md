@@ -28,7 +28,7 @@ Returns the absolute value (in pixels) of the UDim4, relative to the parent of `
 The UDim4Enforcer class is designed to assist in applying a [UDim4](udim4.md) value to a GuiObject's [Position](http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Position) and [Size](http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Size) properties. It will automatically apply UDim4s to the object and keep them up to date until it is destroyed.
 
 ## Constructors
-### UDim4:MakeEnforcer([GuiObject](http://wiki.roblox.com/index.php?title=API:Class/GuiObject) object, UDim4 position, UDim4 size)
+### UDim4.MakeEnforcer([GuiObject](http://wiki.roblox.com/index.php?title=API:Class/GuiObject) object, UDim4 position, UDim4 size)
 Creates a new UDim4Enforcer for `object` with position `position` and size `size`. If either `position` or `size` are `nil`, the corresponding properties of the GuiObject will not be changed when the enforcer acts.
 
 ## Properties
@@ -49,16 +49,15 @@ Enforces the position and size UDim4s on the object.
 Halts the enforcer and releases all resources it contains. The enforcer is unusable after this.
 
 ## Example
-This example assumes that the UDim4 and UDim4Enforcer modules have been loaded into variables of the same name.
 
 ```lua
 local Position = UDim4.new(0, 0, 1, 0, 0, 0, 0, 0)
 local Size = UDim4.new(UDim2.new(1, 0, -1, 0), UDim2.new(0, 0, 1, 0))
-local Enforcer = UDim4:MakeEnforcer(script.Parent, Position, Size)
+local Enforcer = UDim4.MakeEnforcer(script.Parent, Position, Size)
 ```
 You can also assign Size and Position later, but it is much more efficient to pass them as parameters initially
 
 ```lua
-Enforcer.Size = Size
 Enforcer.Position = Position
+Enforcer.Size = Size
 ```
