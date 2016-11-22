@@ -1,5 +1,5 @@
 # UDim4
-The UDim4 type describes a position where each axis is described by a UDim2. This means that you can position something on the X axis based on the parent's Y size, for instance. UDim4 is contained within folder `Utility` of Ingot.
+The UDim4 type describes a position where each axis is described by a UDim2. This means that you can position something on the X axis based on the parent's Y size, for instance. UDim4 is contained within the `Utility` folder of Ingot.
 
 Consider this example: a dynamically resizing container on both axes with an icon that stays as tall as its parent (and as wide as it is tall) via [SizeConstraint](http://wiki.roblox.com/index.php?title=API:Class/GuiObject/SizeConstraint). If you want to put something to the right of that icon, you cannot guarantee that it will remain to the right - the icon might overlap it on some aspect ratios. UDim4 can solve this.
 
