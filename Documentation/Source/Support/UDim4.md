@@ -21,8 +21,8 @@ The Y coordinate of the UDim4.
 
 ## Methods
 
-### [Vector2](http://wiki.roblox.com/index.php?title=API:Vector2) ToVector2([GuiObject](http://wiki.roblox.com/index.php?title=API:Class/GuiObject) guiObject)
-Returns the absolute value (in pixels) of the UDim4, relative to the parent of `guiObject`. If `guiObject` is parented to `nil`, a zeroed Vector2 (`0, 0`) is returned.
+### [UDim2](http://wiki.roblox.com/index.php?title=API:UDim2) ToUDim2([GuiObject](http://wiki.roblox.com/index.php?title=API:Class/GuiObject) guiObject)
+Returns the AbsoluteValue (in pixels) of the UDim4, relative to the parent of `guiObject`. If `guiObject` is parented to `nil`, a zeroed UDim2(`0, 0, 0, 0`) is returned.
 
 # UDim4Enforcer
 The UDim4Enforcer class is designed to assist in applying a [UDim4](udim4.md) value to a GuiObject's [Position](http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Position) and [Size](http://wiki.roblox.com/index.php?title=API:Class/GuiObject/Size) properties. It will automatically apply UDim4s to the object and keep them up to date until it is destroyed.
